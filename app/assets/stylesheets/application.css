@@ -14,11 +14,9 @@
  *= require_self
  */
 html, body {
-  background-image:url(http://www.resimsi.com/wp-content/uploads/2015/06/website-background5.jpg);
-  background-size:800px 800px;  
   font-family:"Helvetica"; 
   font-weight:300; 
-  font-style: white;
+  color: black;
   margin: 0;
   padding: 0;
   text-align: center;
@@ -39,12 +37,13 @@ html, body {
 
 /* Jumbotron */
 .jumbotron {
-  background-image:url(http://www.planwallpaper.com/static/images/recycled_texture_background_by_sandeep_m-d6aeau9_PZ9chud.jpg);
-  height:600px; 
+  background-image: url(http://www2.psd100.com/wp-content/uploads/2013/08/Honeycomb-light-blue-background20130812.jpg);
+  max-width:200%; 
+  height: 100%;
 }
 
 .jumbotron h1 {
-  color:#fff;
+  color:black;
   font-weight:300; 
   margin-top:80px; 
   margin-bottom:40px;  

@@ -1,6 +1,11 @@
-<h1>Users in the Database</h1>
-<% @users.each do |u| %> <!-- Iterates through each user under the variable u -->
-  <p> <%= link_to u.username %> </p> <!-- Show the users name-->
-  <p> <%= u.phone %> </p> <!-- Show the users email -->
-<% end %>
-<%= link_to "new", users_new_path %> <!-- Create a link that appears as "new" that leads to users_new_path -->
+<div class="container">
+	<div class="jumbotron">
+		<h1>Users in the Database</h1>
+		<% @users.each do |u| %> <!-- Iterates through each user under the variable u -->
+		  <p> <%= link_to u.username %> </p> <!-- Show the users name-->
+		  <p> <%= u.phone %> </p> <!-- Show the users email -->
+		<% end %>
+		<%= link_to "new", users_new_path %> <!-- Create a link that appears as "new" that leads to users_new_path -->
+	</div>
+</div>
+

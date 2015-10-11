@@ -10,7 +10,7 @@ class BizsController < ApplicationController
 	def create
 		@biz = Biz.create(biz_params)
 	    if @biz.save #If saving the user was successful
-	      redirect_to "http://twitter.com"
+	      redirect_to "biz#customers"
 	    else
 	      render "new" #Go to the new view for the user
 	    end
@@ -19,4 +19,8 @@ class BizsController < ApplicationController
 	def biz_params
 		params.require(:biz).permit(:username,:password,:needed_visits)
 	end
+
+	def customers
+	end
+	
 end

@@ -29,26 +29,16 @@
       <!-- /.container -->
   </nav>
 
+
   <div class="container">
     <div class="jumbotron">
-      <% @page_title = "UserAuth | Signup" %>
-      <div class="Sign_Form">
-        <h1>Sign Up</h1>
-        <%= form_for(:user, :url => {:controller => 'users', :action => 'create'}) do |f| %>
-          <p> Username:</br> <%= f.text_field :username%> </p>
-          <p> Password:</br> <%= f.password_field :password%></p>
-          <p> Password Confirmation:</br> <%= f.password_field :password_confirmation%> </p>
-          <p> Phone Number:</br> <%= f.text_field :phone%> </p>
-          <%= f.submit :Signup %>
-        <% end %>
-        <% if @user.errors.any? %>
-          <ul class="Signup_Errors">
-          <% for message_error in @user.errors.full_messages %>
-            <p style:"color:red"><%= message_error %></p>
-          <% end %>
-          </ul>
-        <% end %>
-      </div>
-    </div>
-  </div>
+    </br>
+		<h style="font-size:300%; font-family:Helvetica"><b> La Petite </b></h>
+		<p> Desciption: One free hairut for every 10 visits</br>
+		Goal: 7/10 <p>
+
+		<%= form_tag("/search", method: "get") do %>
+		  <%= label_tag(:q, "Enter code:") %>
+		  <%= text_field_tag(:q) %>
+		 <% end %>
 </body>

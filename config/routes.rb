@@ -1,12 +1,17 @@
 Rails.application.routes.draw do
   resources :bizs
   root 'pages#home'
-  get 'business/customers', to: "bizs#index"
+  #get 'business/customers', to: "bizs#index"
   get "business/new", to: "bizs#new"
   post "business/new", to: "bizs#create"
+
+  get "business/lapetite", to: "bizs#customers"
+
   get "users/new", to: "users#new"
   post "users/new", to: "users#create"
-
+  #get "users/search", to: "users#search", as: :user
+  get "users/Alex", to: "users#usertest"
+  get "users/Alex/0", to: "users#biztest"
 
 
   # The priority is based upon order of creation: first created -> highest priority.

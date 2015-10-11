@@ -1,19 +1,55 @@
 
-<% @page_title = "BizAuth | Signup" %>
-<div class="Sign_Form">
-  <h1>Sign Up Your Business</h1>
-  <%= form_for(:biz, :url => {:controller => 'bizs', :action => 'create'}) do |f| %>
-    <p> Username:</br> <%= f.text_field :username%> </p>
-    <p> Password:</br> <%= f.password_field :password%></p>
-    <p> Password Confirmation:</br> <%= f.password_field :password_confirmation%> </p>
-    <p> Needed Visits:</br> <%= f.text_field :needed_visits%> </p>
-    <%= f.submit :Signup %>
-  <% end %>
-  <% if @biz.errors.any? %>
-    <ul class="Signup_Errors">
-    <% for message_error in @biz.errors.full_messages %>
-      <p style:"color:red"><%= message_error %></p>
-    <% end %>
-    </ul>
-  <% end %>
-</div>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="">Home</a>
+          </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                  <li>
+                      <a href="#">Business</a>
+                  </li>
+                  <li>
+                      <a href="users/new">User</a>
+                  </li>
+              </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container -->
+  </nav>
+
+
+  <div class="container">
+    <div class="jumbotron">
+      <% @page_title = "BizAuth | Signup" %>
+      <div class="Sign_Form"; background-image:"http://www.themesrefinery.net/wp-content/uploads/2014/06/website-background-images-for-287671.jpg">
+        <h1> Sign Up Your Business</h1>
+        <%= form_for(:biz, :url => {:controller => 'bizs', :action => 'create'}) do |f| %>
+          <p> Username:</br> <%= f.text_field :username%> </p>
+          <p> Password:</br> <%= f.password_field :password%></p>
+          <p> Password Confirmation:</br> <%= f.password_field :password_confirmation%> </p>
+          <p> Needed Visits:</br> <%= f.text_field :needed_visits%> </p>
+          <%= f.submit :Signup %>
+        <% end %>
+        <% if @biz.errors.any? %>
+          <ul class="Signup_Errors">
+          <% for message_error in @biz.errors.full_messages %>
+            <p style:"color:red"><%= message_error %></p>
+          <% end %>
+          </ul>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</body>
