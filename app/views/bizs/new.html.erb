@@ -1,0 +1,19 @@
+
+<% @page_title = "BizAuth | Signup" %>
+<div class="Sign_Form">
+  <h1>Sign Up Your Business</h1>
+  <%= form_for(:biz, :url => {:controller => 'bizs', :action => 'create'}) do |f| %>
+    <p> Username:</br> <%= f.text_field :username%> </p>
+    <p> Password:</br> <%= f.password_field :password%></p>
+    <p> Password Confirmation:</br> <%= f.password_field :password_confirmation%> </p>
+    <p> Needed Visits:</br> <%= f.text_field :needed_visits%> </p>
+    <%= f.submit :Signup %>
+  <% end %>
+  <% if @biz.errors.any? %>
+    <ul class="Signup_Errors">
+    <% for message_error in @biz.errors.full_messages %>
+      <p style:"color:red"><%= message_error %></p>
+    <% end %>
+    </ul>
+  <% end %>
+</div>

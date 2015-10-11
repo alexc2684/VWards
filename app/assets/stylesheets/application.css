@@ -1,0 +1,122 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+html, body {
+  background-image:url(http://www.resimsi.com/wp-content/uploads/2015/06/website-background5.jpg);
+  background-size:800px 800px;  
+  font-family:"Helvetica"; 
+  font-weight:300; 
+  font-style: white;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.header {
+  color:#fff;
+}
+
+.header ul {
+  list-style: none;
+}
+
+.header li {
+  display: inline;
+  margin-right: 30px;
+}
+
+/* Jumbotron */
+.jumbotron {
+  background-image:url(http://www.planwallpaper.com/static/images/recycled_texture_background_by_sandeep_m-d6aeau9_PZ9chud.jpg);
+  height:600px; 
+}
+
+.jumbotron h1 {
+  color:#fff;
+  font-weight:300; 
+  margin-top:80px; 
+  margin-bottom:40px;  
+}
+
+.jumbotron .btn {
+  color:#0393ff;
+  background:transparent;
+  border:1px solid #0393ff;
+  border-radius:2px; 
+  padding:8px 20px;
+}
+
+.jumbotron .btn:hover {
+  color:#fff;
+  background-color:#0393ff; 
+}
+
+form {
+  margin-top:80px;
+}
+
+#search {
+  background:transparent; 
+  border:0px; 
+  border-radius:0; 
+  border-bottom:1px solid #fff;
+  color:#fff;
+  font-size:18px; 
+  margin:0 20px; 
+}
+
+#search:hover {
+  border-bottom:1px solid #0393ff;
+}
+
+#search:focus {
+  border-bottom:1px solid #0393ff;
+  box-shadow:0px 0px 0px; 
+  outline:0px;
+}
+
+/* Supporting */
+.main,
+.supporting h2,
+.supporting p,
+.feature {
+  text-align: center;
+  color:#fff;
+}
+
+.supporting {
+  padding-bottom:80px; 
+}
+
+.supporting h2, .feature h1 {
+  color:#0393ff;
+  margin-top:60px; 
+  margin-bottom: 10px;
+  font-size: 32px;
+  font-weight:300;
+}
+
+.supporting p {
+  margin-bottom: 45px;
+  font-size: 16px;
+}
+
+.supporting .thumbnail {
+  background:transparent; 
+  border: none;
+  padding: 0;
+}
+
+
